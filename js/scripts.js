@@ -61,6 +61,6 @@ window.addEventListener('DOMContentLoaded', event => {
         dots: true,
         autoplay: true,
         autoplayTimeout: 10000,
-        items: 4
+        items: 3
     });
 });

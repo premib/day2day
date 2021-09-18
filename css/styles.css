@@ -11605,13 +11605,13 @@ footer a:hover, footer a:active, footer a:focus {
 @media (max-width: 767px) {
   .social-icons {
     top: auto;
-    bottom: 1px;
-    left: 0;
+    bottom: -20px;
+    left: -17px;
     position: fixed;
     z-index: 111;
     background: #fff;
-    right: 0;
-    margin: 0;
+    right: -17px;
+    height: 70px;
   }
   .social-icons ul {
     display: flex;
@@ -11629,6 +11629,9 @@ footer a:hover, footer a:active, footer a:focus {
   color: white;
 }
 
+div.owl-carousel .owl-item img {
+  height: 300px !important;
+}
 @media (min-width: 576px) {
   .masthead .masthead-device-mockup .circle {
     width: 70%;
