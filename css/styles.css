@@ -11673,3 +11673,31 @@ div.owl-carousel .owl-item img {
     max-width: 17rem;
   }
 }
+
+@media (max-width: 992px) {
+  #feedback-desktop { 
+    display: none;
+  }
+
+  button.navbar-toggler {
+    display: none;
+  }
+  
+  #day2daylogo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ul.navbar-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #mainNav {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+  }
+}

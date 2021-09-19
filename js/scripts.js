@@ -42,17 +42,49 @@ window.addEventListener('DOMContentLoaded', event => {
         feedbackNav: {
             english: "Send Feedback",
             tamil: "கருத்துகளை பதிவிடவும்"
+        },
+        headerNav: {
+            english: "Send Feedback",
+            tamil: "கருத்துகளை பதிவிடவும்"
+        },
+        descriptionNav: {
+            english: "Send Feedback",
+            tamil: "கருத்துகளை பதிவிடவும்"
+        },
+        vegNav: {
+            english: "Vegetables",
+            tamil: "காய்கறிகள்"
+        },
+        vegContentNav:{
+            english: "Fresh Vegetables at wholesale price",
+            tamil: "மொத்த விலையில் புதிய காய்கறிகள்"
+        }
+    }
+
+    let updateContent = languageId => {
+        for(let content in contents) {
+            $('#'+content).text(contents[content][languageId])
         }
     }
     let toggleLanguageHandler = (languageId, hideLang) => {
         $('#'+languageId).on('click', event=> {
-            $('#'+languageId).css('display', 'none');
-            $('#'+hideLang).css('display', 'block');
-            for(let content in contents) {
-                console.log(content, $('#'+content), languageId, content[languageId])
-                $('#'+content).text(contents[content][languageId])
-            }
-        })
+            $('#'+languageId).parent().css('display', 'none');
+            $('#'+hideLang).parent().css('display', 'block');
+            updateContent(languageId)
+            window.localStorage.setItem('preferredlanguageday2day', languageId);
+        });
+    }
+    //If user changes the language, that will be set as default language from  the next reload.
+    if((preferredLanguage=window.localStorage.getItem('preferredlanguageday2day'))) {
+        updateContent(preferredLanguage);
+        if(preferredLanguage == 'tamil')
+            $('#english').parent().show();
+        else
+            $('#tamil').parent().show();
+    } 
+    else {
+        updateContent('english')
+        $('#tamil').show()
     }
     toggleLanguageHandler('english', 'tamil');
     toggleLanguageHandler('tamil', 'english');
