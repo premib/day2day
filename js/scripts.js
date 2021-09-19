@@ -8,7 +8,7 @@
 // 
 
 window.addEventListener('DOMContentLoaded', event => {
-
+    let owlChanged = false;
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
@@ -88,11 +88,20 @@ window.addEventListener('DOMContentLoaded', event => {
     }
     toggleLanguageHandler('english', 'tamil');
     toggleLanguageHandler('tamil', 'english');
+
     $(".owl-carousel").owlCarousel({
         margin: 100,
         dots: true,
         autoplay: true,
-        autoplayTimeout: 10000,
-        items: 3
+        autoplayTimeout: 2000,
+        items: 1,
+        loop: true,
+        responsive: {
+            768: {
+                center: true,
+                items: 2
+            }
+        }
     });
+
 });

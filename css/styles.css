@@ -11629,6 +11629,15 @@ footer a:hover, footer a:active, footer a:focus {
   color: white;
 }
 
+#offers_container {
+  margin: 30px 0px;
+}
+
+#offers_container h2 {
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
 div.owl-carousel .owl-item img {
   height: 300px !important;
 }
