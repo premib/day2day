@@ -84,7 +84,7 @@ window.addEventListener('DOMContentLoaded', event => {
     } 
     else {
         updateContent('english')
-        $('#tamil').show()
+        $('#tamil').parent().show()
     }
     toggleLanguageHandler('english', 'tamil');
     toggleLanguageHandler('tamil', 'english');
