@@ -7,6 +7,8 @@
 // Scripts
 // 
 
+const productsStyle = ""; //"single row" to show all products in single row in mobile view
+
 window.addEventListener('DOMContentLoaded', event => {
     let owlChanged = false;
     // Activate Bootstrap scrollspy on the main nav element
@@ -104,4 +106,8 @@ window.addEventListener('DOMContentLoaded', event => {
         }
     });
 
+    if(productsStyle === "single row") {
+        $('.features-mb-diff-container').removeClass('features-mb-diff-container');
+        $('.features-mb-diff').removeClass('features-mb-diff');
+    }
 });

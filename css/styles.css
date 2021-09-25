@@ -11602,6 +11602,10 @@ footer a:hover, footer a:active, footer a:focus {
   font-size: 30px;
 }
 
+img.product-img {
+  height: 200px;
+}
+
 @media (max-width: 767px) {
   .social-icons {
     top: auto;
@@ -11621,6 +11625,17 @@ footer a:hover, footer a:active, footer a:focus {
   }
   .social-icons ul li {
     flex: 1;
+  }
+  .features-mb-diff {
+    width: 50%;
+  }
+  .features-mb-diff-container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  img.product-img {
+    height: 100px;
+    max-width: 105%;
   }
 }
 
